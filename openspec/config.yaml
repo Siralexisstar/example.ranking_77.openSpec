@@ -1,0 +1,63 @@
+schema: spec-driven
+
+context: |
+  Project: React SPA for daily CrossFit WOD result registration and rankings.
+  Deployment: Vercel, with continuous deployment through GitHub Actions.
+  Runtime and tooling: React 19, React DOM 19, Vite 8, TypeScript 6, Node.js 20.x, npm, ESLint 10, typescript-eslint, eslint-plugin-react-hooks, and eslint-plugin-react-refresh.
+
+  Product purpose:
+  - Let users register daily WOD results with simple, clear flows.
+  - Display daily, weekly, and monthly rankings.
+  - Prioritize a clean, consistent, fast, professional, and easy-to-scan user experience.
+
+  Core domains:
+  - Athlete: person participating in WODs.
+  - Wod: daily workout with date, name, type, and description.
+  - Result: an athlete's registered result for a WOD.
+  - Ranking: classification calculated from results.
+  - Period: daily, weekly, or monthly ranking time range.
+
+  Architecture principles:
+  - Organize the UI around reusable components, business views, and data services.
+  - Preserve separation between presentation logic, data transformation, ranking logic, and service access.
+  - Keep ranking calculations outside visual components.
+  - Centralize data access through hooks or services as the app grows.
+  - Allow local state, mocks, or a simple API initially, while keeping the path open for backend, database, authentication, storage, or external services later.
+  - Define shared business models with TypeScript to avoid inconsistencies between forms, tables, filters, and services.
+
+  Expected source organization:
+  - src/assets for static visual assets.
+  - src/components for reusable UI components.
+  - src/features for domain-based feature modules.
+  - src/pages for main application screens.
+  - src/services for API access, adapters, and data sources.
+  - src/types for shared TypeScript types.
+  - src/utils for pure utilities and helpers.
+
+  UI principles:
+  - Favor operational clarity over decorative composition.
+  - Use clear visual hierarchy, accessible forms, readable and sortable tables, responsive layout, and consistent spacing, color, typography, and interaction patterns.
+  - Include visible validation, loading, empty, and error states where relevant.
+  - Preserve basic accessibility: sufficient contrast, form labels, and keyboard navigation.
+
+  Future additions to consider when relevant:
+  - Vitest and Testing Library for unit and integration tests.
+  - Playwright for end-to-end testing.
+  - Form validation library if result entry flows become more complex.
+  - API or serverless layer for persistent WOD results and historical rankings.
+  - Authentication, categories, athlete history, statistics dashboards, ranking exports, and notifications.
+
+rules:
+  proposal:
+    - Keep proposal focused on functional scope, motivation, and impact.
+    - Do not include concrete asset paths, icon names, component names, route internals, translation keys, or validator names unless they are essential to scope.
+    - Put technical design detail such as asset paths, implementation choices, routing decisions, and rendering details in design.md.
+  specs:
+    - Define expected behavior using requirements and scenarios as the behavioral source of truth.
+    - Keep specs non-technical and focused on observable behavior, user-facing outcomes, and external contracts.
+    - Use normative language such as SHALL or MUST, and preserve the required OpenSpec requirement and scenario heading format.
+    - Write scenarios in a structured acceptance style such as GIVEN/WHEN/THEN or an equivalent structured behavior format.
+    - Do not include file paths, classes, functions, component names, commands, validation helper names, or architecture decisions.
+    - Put assets, routing mechanics, translation namespaces, and implementation detail in design.md unless they are directly part of the observable contract.
+  design:
+    - Record concrete asset paths, component reuse decisions, routing approach, translation namespaces, and validation strategy here when relevant.
