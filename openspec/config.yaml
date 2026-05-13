@@ -3,7 +3,7 @@ schema: spec-driven
 context: |
   Project: React SPA for daily CrossFit WOD result registration and rankings.
   Deployment: Vercel, with continuous deployment through GitHub Actions.
-  Runtime and tooling: React 19, React DOM 19, Vite 8, TypeScript 6, Node.js 20.x, npm, ESLint 10, typescript-eslint, eslint-plugin-react-hooks, and eslint-plugin-react-refresh.
+  Runtime and tooling: React 19, React DOM 19, Vite 8, TypeScript 6, Node.js 20.19+ or 22.12+, npm, Biome, and Lefthook.
 
   Product purpose:
   - Let users register daily WOD results with simple, clear flows.

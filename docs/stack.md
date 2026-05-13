@@ -13,15 +13,13 @@
 
 ## Node
 
-- [Node.js](https://nodejs.org/) `20.x`
+- [Node.js](https://nodejs.org/) `20.19+` or `22.12+`
 - [npm](https://www.npmjs.com/)
 
 ## Tooling
 
-- [ESLint 10](https://eslint.org/)
-- [typescript-eslint](https://typescript-eslint.io/)
-- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
-- [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh)
+- [Biome](https://biomejs.dev/)
+- [Lefthook](https://lefthook.dev/)
 
 ## Deployment
 
