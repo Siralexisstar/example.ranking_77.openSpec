@@ -1,17 +1,18 @@
 :root {
-	--color-bg: #0b0d10;
-	--color-surface-strong: rgba(16, 19, 24, 0.95);
-	--color-surface: rgba(20, 24, 30, 0.78);
-	--color-border-strong: rgba(227, 205, 162, 0.32);
-	--color-border: rgba(227, 205, 162, 0.14);
-	--color-text: #f4efe7;
-	--color-muted: #bdb4a7;
-	--color-accent: #f27a36;
-	--color-accent-soft: #e3cda2;
-	--color-ink: #16110d;
+	--color-bg: #eef2f0;
+	--color-surface-strong: rgba(252, 253, 252, 0.92);
+	--color-surface: rgba(243, 247, 245, 0.9);
+	--color-border-strong: rgba(67, 88, 82, 0.3);
+	--color-border: rgba(67, 88, 82, 0.16);
+	--color-text: #192320;
+	--color-muted: #5d6b67;
+	--color-accent: #c4694d;
+	--color-accent-soft: #7f9e8d;
+	--color-ink: #f7f4ef;
+	--color-danger: #a63d40;
 
-	--shadow-shell: 0 2rem 5rem rgba(0, 0, 0, 0.35);
-	--shadow-card: 0 1.2rem 3rem rgba(0, 0, 0, 0.22);
+	--shadow-shell: 0 2rem 5rem rgba(47, 64, 57, 0.12);
+	--shadow-card: 0 1rem 2.4rem rgba(40, 56, 49, 0.1);
 
 	--radius-shell: 2rem;
 	--radius-card-lg: 1.5rem;
@@ -28,16 +29,16 @@
 	--motion-base: 180ms ease;
 
 	--font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-	--font-display: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-	--font-eyebrow: "Trebuchet MS", "Arial Narrow", sans-serif;
+	--font-display: Georgia, "Times New Roman", serif;
+	--font-eyebrow: "Trebuchet MS", Arial, sans-serif;
 
 	font-family: var(--font-body);
 	line-height: 1.5;
 	font-weight: 400;
 	color: var(--color-text);
 	background:
-		radial-gradient(circle at top, rgba(242, 122, 54, 0.08), transparent 30rem),
-		linear-gradient(180deg, #111419 0%, var(--color-bg) 38%, #07080a 100%);
+		radial-gradient(circle at top, rgba(196, 105, 77, 0.08), transparent 26rem),
+		linear-gradient(180deg, #f5f7f5 0%, var(--color-bg) 42%, #e4ebe8 100%);
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -57,6 +58,7 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 	background: var(--color-bg);
+	overflow-x: hidden;
 }
 
 body::before {
@@ -65,14 +67,14 @@ body::before {
 	inset: 0;
 	background:
 		radial-gradient(
-			circle at 15% 15%,
-			rgba(242, 122, 54, 0.12),
-			transparent 18rem
+			circle at 12% 12%,
+			rgba(196, 105, 77, 0.14),
+			transparent 16rem
 		),
 		radial-gradient(
-			circle at 85% 0%,
-			rgba(227, 205, 162, 0.07),
-			transparent 20rem
+			circle at 88% 0%,
+			rgba(127, 158, 141, 0.14),
+			transparent 22rem
 		);
 	pointer-events: none;
 }
@@ -108,28 +110,26 @@ h1,
 h2,
 h3 {
 	font-family: var(--font-display);
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 0.01em;
 	color: var(--color-text);
 }
 
 h1 {
-	font-size: clamp(3.2rem, 10vw, 6.6rem);
-	line-height: 0.95;
+	font-size: clamp(2.5rem, 7.8vw, 4.7rem);
+	line-height: 0.98;
 	margin-bottom: var(--space-5);
-	text-transform: uppercase;
 }
 
 h2 {
-	font-size: clamp(2rem, 5vw, 3.3rem);
-	line-height: 0.98;
+	font-size: clamp(1.95rem, 5vw, 3rem);
+	line-height: 1.02;
 	margin-bottom: var(--space-3);
-	text-transform: uppercase;
 }
 
 h3 {
 	font-size: 1.3rem;
-	line-height: 1.1;
+	line-height: 1.2;
 }
 
 p {
@@ -144,13 +144,11 @@ p {
 	font-weight: 700;
 	letter-spacing: 0.22em;
 	text-transform: uppercase;
-	color: var(--color-accent-soft);
+	color: #486154;
 }
 
 .hero-text,
-.section-copy,
-.spotlight-copy p,
-.support-copy {
+.section-copy {
 	max-width: 42rem;
 	font-size: 1.05rem;
 }
@@ -164,7 +162,7 @@ p {
 	}
 
 	h1 {
-		font-size: clamp(2.8rem, 16vw, 4.4rem);
+		font-size: clamp(2.15rem, 12vw, 3.5rem);
 	}
 
 	h2 {
@@ -173,8 +171,6 @@ p {
 
 	.hero-text,
 	.section-copy,
-	.spotlight-copy p,
-	.support-copy,
 	p {
 		font-size: 0.98rem;
 	}
